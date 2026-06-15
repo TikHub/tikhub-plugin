@@ -11,8 +11,12 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
-# Local Claude session state (not part of the plugin)
+# Local Claude session state / plugin cache (not part of the plugin)
 .claude/
+.claude/plugins/
+
+# Development planning docs (not part of the shipped plugin)
+plans/
 
 # Logs / scratch
 *.log
