@@ -27,6 +27,7 @@ Coverage via the App-V2 API. Exhaustive endpoints:
 | Search notes | `GET /api/v1/xiaohongshu/app_v2/search_notes` | `keyword`, `page`, `sort_type`, `note_type` |
 | Search users | `GET /api/v1/xiaohongshu/app_v2/search_users` | `keyword`, `page` |
 | Search products | `GET /api/v1/xiaohongshu/app_v2/search_products` | `keyword`, `page` |
+| Search images | `GET /api/v1/xiaohongshu/app_v2/search_images` | `keyword`, `page` |
 | Note comments | `GET /api/v1/xiaohongshu/app_v2/get_note_comments` | `note_id`, `cursor`, `index` |
 | Note sub-comments | `GET /api/v1/xiaohongshu/app_v2/get_note_sub_comments` | `note_id`, `comment_id`, `cursor` |
 

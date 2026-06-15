@@ -36,10 +36,10 @@ curl -s "https://api.tikhub.io/api/v1/instagram/v2/fetch_user_info?username=inst
 curl -s "https://api.tikhub.io/api/v1/twitter/web/fetch_search_timeline?keyword=ai&search_type=Top" \
   -H "Authorization: Bearer $TIKHUB_API_KEY"
 
-# Batch (POST) example shape
+# Batch (POST) — body is a RAW JSON ARRAY of ids (not an object; an object body returns HTTP 422)
 curl -s -X POST "https://api.tikhub.io/api/v1/tiktok/app/v3/fetch_multi_video" \
   -H "Authorization: Bearer $TIKHUB_API_KEY" -H "Content-Type: application/json" \
-  -d '{"aweme_ids": ["7372484719365098283"]}'
+  -d '["7372484719365098283","7372484719365098284"]'
 ```
 
 ## Pagination (param name varies by platform)
