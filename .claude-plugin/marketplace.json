@@ -1,0 +1,55 @@
+{
+  "name": "tikhub-plugins",
+  "owner": {
+    "name": "TikHub",
+    "email": "tikhub.io@proton.me"
+  },
+  "metadata": {
+    "description": "Official TikHub plugin for Claude Code — social-media data, media download, and analytics across TikTok, Douyin, Instagram, YouTube, Twitter/X, Xiaohongshu, and more, via TikHub's hosted MCP, REST API, and Python SDK.",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "tikhub-plugin",
+      "source": "./",
+      "description": "TikHub social-media data for Claude. Download media and fetch posts, profiles, comments, search, trends, and analytics across TikTok, Douyin, Instagram, YouTube, Twitter/X, Threads, Xiaohongshu, and 9+ more platforms — via TikHub's hosted MCP server, the REST API, or the Python SDK.",
+      "version": "0.1.0",
+      "author": {
+        "name": "TikHub",
+        "email": "tikhub.io@proton.me",
+        "url": "https://tikhub.io"
+      },
+      "homepage": "https://tikhub.io",
+      "repository": "https://github.com/TikHub/tikhub-plugin",
+      "license": "MIT",
+      "keywords": [
+        "tikhub",
+        "tiktok",
+        "douyin",
+        "instagram",
+        "youtube",
+        "twitter",
+        "xiaohongshu",
+        "social-media",
+        "social-media-api",
+        "video-download",
+        "mcp",
+        "claude-code",
+        "creator-analytics",
+        "trend-research",
+        "social-listening"
+      ],
+      "category": "web-integration",
+      "tags": [
+        "social-media",
+        "data-extraction",
+        "video-download",
+        "mcp",
+        "creator-analytics",
+        "trend-research",
+        "social-listening",
+        "competitor-analysis"
+      ]
+    }
+  ]
+}
