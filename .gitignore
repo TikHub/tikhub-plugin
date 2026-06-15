@@ -1,0 +1,18 @@
+# Python / virtualenv
+.venv/
+__pycache__/
+*.pyc
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local Claude session state (not part of the plugin)
+.claude/
+
+# Logs / scratch
+*.log
