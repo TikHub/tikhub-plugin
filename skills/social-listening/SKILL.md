@@ -18,7 +18,7 @@ Collect mentions of a brand/keyword across platforms, then analyze sentiment and
 1. **Define the query**: brand/keyword(s), platforms to cover, time window, target volume
    (e.g. ~100 mentions).
 2. **Search each platform** using its search endpoint (one query → paginate to the target volume):
-   - TikTok `app/v3/fetch_general_search_result`, Douyin `app/v3/fetch_video_search_result`,
+   - TikTok `app/v3/fetch_video_search_result`, Douyin `search/fetch_general_search_v2` (POST body),
      Instagram `v2/general_search`, Twitter `web/fetch_search_timeline`, YouTube
      `web_v2/get_general_search`, Xiaohongshu `app_v2/search_notes`.
    - Find exact paths via `tikhub-find-endpoint "search" --platform <slug>`.

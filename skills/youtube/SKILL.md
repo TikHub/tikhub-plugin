@@ -22,10 +22,11 @@ Deep coverage of YouTube via the Web-V2 API. Exhaustive endpoints:
 |---|---|---|
 | Video info | `GET /api/v1/youtube/web_v2/get_video_info` | `video_id`, `language_code` |
 | Video info by URL | `GET /api/v1/youtube/web_v2/get_video_info_v2` | `video_url` |
-| Download streams | `GET /api/v1/youtube/web_v2/get_video_streams` | `video_id` \| `video_url` |
+| Download streams | `GET /api/v1/youtube/web_v2/get_video_streams_v2` | `video_id` \| `video_url` |
 | Captions/subtitles | `GET /api/v1/youtube/web_v2/get_video_captions` | `video_id`, `language_code`, `format` |
 | Video comments | `GET /api/v1/youtube/web_v2/get_video_comments` | `video_id`, `sort_by`, `continuation_token` |
 | Comment replies | `GET /api/v1/youtube/web_v2/get_video_comment_replies` | `continuation_token` |
+| Channel id (from URL) | `GET /api/v1/youtube/web_v2/get_channel_id` | `channel_url` |
 | Channel info | `GET /api/v1/youtube/web_v2/get_channel_description` | `channel_id`, `continuation_token` |
 | General search | `GET /api/v1/youtube/web_v2/get_general_search` | `search_query`, `upload_time` |
 | Shorts search | `GET /api/v1/youtube/web_v2/get_shorts_search` | `search_query`, `upload_time` |
@@ -52,5 +53,5 @@ the token from the previous response; stop when none is returned. **Each page is
 
 ## Red flags
 
-- Use `get_video_streams` for downloadable media URLs; `get_video_info` is metadata only.
+- Use `get_video_streams_v2` for downloadable media URLs; `get_video_info` is metadata only.
 - A `video_id` is the 11-char id; pass full URLs to the `*_v2` variants.

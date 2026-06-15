@@ -17,8 +17,9 @@ Assess a hashtag/keyword and surface its top content and related tags.
 
 1. **Pick platform(s)** and the hashtag/keyword.
 2. **Pull signals + content:**
-   - TikTok: `ads/get_trends_hashtag_detail` (`hashtag_id`) and `ads/get_trends_hashtag_list`.
-   - Douyin: `app/v3/fetch_hashtag_search_result`.
+   - TikTok: `ads/get_trends_hashtag_detail` (`hashtag_id`) and `ads/get_trends_hashtag_list`;
+     pull videos under a hashtag with `app/v3/fetch_hashtag_video_list` (`ch_id`).
+   - Douyin: `search/fetch_general_search_v2` (POST) for hashtag/keyword content.
    - Instagram: `v2/search_hashtags` + `v2/fetch_hashtag_posts`.
    - Xiaohongshu: `app_v2/search_notes` (keyword).
    - Discover exact paths: `tikhub-find-endpoint "hashtag" --platform <slug>`.

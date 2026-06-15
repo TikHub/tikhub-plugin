@@ -17,7 +17,7 @@ Mine a single post's comment section for sentiment and themes.
 
 1. **Identify the post** (platform + id/URL).
 2. **Fetch comments**, paginating to a target count (cap it):
-   - TikTok/Douyin: comment endpoints (`tikhub-find-endpoint "comment" --platform tiktok`).
+   - TikTok: `app/v3/fetch_video_comments` (`aweme_id`, `cursor`). Douyin: `app/v3/fetch_video_comments` (`aweme_id`, `cursor`).
    - Instagram: `v2/fetch_post_comments` (+ `fetch_comment_replies`).
    - YouTube: `web_v2/get_video_comments` (+ `get_video_comment_replies`).
    - Twitter: `web/fetch_post_comments`. Xiaohongshu: `app_v2/get_note_comments`.

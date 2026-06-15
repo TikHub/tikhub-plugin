@@ -64,9 +64,15 @@ for big jobs).
 
 ## Cost awareness
 
-Pricing is per-endpoint and credit-based with daily-volume tier discounts. There is a pricing/
-calculator under the **TikHub-User-API** tag — use `tikhub-endpoint-discovery` (query
-`price` / `calculate`) to find it, and check balance before bulk runs.
+Pricing is per-endpoint and credit-based with daily-volume tier discounts. Account/cost endpoints
+under **TikHub-User-API**:
+
+- `GET /api/v1/tikhub/user/get_user_info` — account info / balance.
+- `GET /api/v1/tikhub/user/get_user_daily_usage` — today's usage (note: this call is itself billed).
+- `GET /api/v1/tikhub/user/calculate_price?endpoint=<path>&request_per_day=<n>` — estimate a run's cost.
+- `GET /api/v1/tikhub/user/get_endpoint_info?endpoint=<path>` — the price/details of one endpoint.
+
+Check balance and estimate cost before bulk runs.
 
 ## Verification gate
 

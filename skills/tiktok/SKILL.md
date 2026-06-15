@@ -25,7 +25,10 @@ trends), hand off to the task skills noted below.
 | Video by share URL | `GET /api/v1/tiktok/app/v3/fetch_one_video_by_share_url` | `share_url` |
 | User profile | `GET /api/v1/tiktok/app/v3/handler_user_profile` | `sec_user_id` \| `unique_id` |
 | User's videos | `GET /api/v1/tiktok/app/v3/fetch_user_post_videos` | `sec_user_id`, `max_cursor`, `count` |
-| General search | `GET /api/v1/tiktok/app/v3/fetch_general_search_result` | `keyword`, `offset`, `count` |
+| Video search | `GET /api/v1/tiktok/app/v3/fetch_video_search_result` | `keyword`, `offset`, `count`, `sort_type`, `publish_time` |
+| User search | `GET /api/v1/tiktok/app/v3/fetch_user_search_result` | `keyword`, `offset`, `count` |
+| Video comments | `GET /api/v1/tiktok/app/v3/fetch_video_comments` | `aweme_id`, `cursor`, `count` |
+| Hashtag video list | `GET /api/v1/tiktok/app/v3/fetch_hashtag_video_list` | `ch_id`, `cursor`, `count` |
 | Popular trends | `GET /api/v1/tiktok/ads/get_popular_trends` | `period`, `country_code`, `page`, `limit` |
 | Trending hashtags | `GET /api/v1/tiktok/ads/get_trends_hashtag_list` | `time_range`, `country_code`, `page` |
 | Hashtag detail | `GET /api/v1/tiktok/ads/get_trends_hashtag_detail` | `hashtag_id`, `country_code` |
@@ -33,7 +36,7 @@ trends), hand off to the task skills noted below.
 | Search creators | `GET /api/v1/tiktok/ads/search_creators` | `keyword`, `sort_by`, `creator_country` |
 | Creator video analytics | `POST /api/v1/tiktok/creator/get_video_analytics_summary` | JSON body |
 | Comment keywords | `GET /api/v1/tiktok/analytics/fetch_comment_keywords` | `item_id` |
-| Shop product search | `GET /api/v1/tiktok/shop/web/fetch_search_products_list` | `search_word`, `region`, `offset` |
+| Product detail | `GET /api/v1/tiktok/shop/web/fetch_product_detail_v3` | `product_id`, `region` |
 
 ## Example
 
@@ -44,8 +47,9 @@ curl -s "https://api.tikhub.io/api/v1/tiktok/app/v3/fetch_user_post_videos?sec_u
 
 ## Pagination
 
-User/video lists use `max_cursor` (start `0`) + `count`; search uses `offset` + `count`. Read the
-next cursor and `has_more` from the response; loop until exhausted. **Each page is billed — cap it.**
+User/video lists use `max_cursor` (start `0`) + `count`; search uses `offset` + `count`; comments
+and hashtag video lists use `cursor` + `count`. Read the next cursor and `has_more` from the
+response; loop until exhausted. **Each page is billed — cap it.**
 
 ## Hand off to task skills
 

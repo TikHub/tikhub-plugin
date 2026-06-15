@@ -22,6 +22,9 @@ Deep coverage of Instagram via the V2 API. Exhaustive endpoints:
 |---|---|---|
 | User info | `GET /api/v1/instagram/v2/fetch_user_info` | `username` \| `user_id` |
 | User posts | `GET /api/v1/instagram/v2/fetch_user_posts` | `username` \| `user_id`, `pagination_token` |
+| User reels | `GET /api/v1/instagram/v2/fetch_user_reels` | `username` \| `user_id`, `pagination_token` |
+| User stories | `GET /api/v1/instagram/v2/fetch_user_stories` | `username` \| `user_id` |
+| Post info | `GET /api/v1/instagram/v2/fetch_post_info` | `code_or_url` |
 | Search users | `GET /api/v1/instagram/v2/search_users` | `keyword` |
 | General search | `GET /api/v1/instagram/v2/general_search` | `keyword`, `pagination_token` |
 | Search reels | `GET /api/v1/instagram/v2/search_reels` | `keyword`, `pagination_token` |
