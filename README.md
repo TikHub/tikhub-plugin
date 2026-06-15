@@ -9,7 +9,7 @@ ready-made task workflows.
 
 ## Quick start
 
-1. **Get an API key** at <https://user.tikhub.io> (free daily check-in credits available).
+1. **Get an API key** at <https://user.tikhub.io>.
 2. **Export it:**
    ```bash
    export TIKHUB_API_KEY="your_api_key_here"

@@ -14,8 +14,7 @@ Read this once, get the user set up, then **hand off to the skill that owns the 
 ## Step 1 — Get an API key (one time)
 
 Send the user to <https://user.tikhub.io>: register (email verification), open the API Keys
-page, and create a key. Free trial credits are available via the daily check-in. Pricing is
-per-endpoint, credit-based.
+page, and create a key. Pricing is per-endpoint, credit-based.
 
 ## Step 2 — Set the key in the environment
 
