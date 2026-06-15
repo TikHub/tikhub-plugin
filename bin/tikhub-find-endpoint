@@ -1,0 +1,66 @@
+#!/usr/bin/env python3
+"""Search the TikHub endpoint index.
+
+Usage:
+  tikhub-find-endpoint "QUERY" [--platform tiktok] [--method GET|POST] [--limit 20]
+
+Matches QUERY terms against the path, summary, and tag; ranks by number of terms matched
+(then by path length). --platform filters by the /{platform}/ path segment.
+"""
+import argparse
+import json
+import os
+import sys
+
+INDEX = os.path.join(
+    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+    "skills", "tikhub-endpoint-discovery", "references", "openapi-index.json",
+)
+
+
+def score(rec, terms):
+    hay = (rec["path"] + " " + rec["summary"] + " " + rec["tag"]).lower()
+    return sum(1 for t in terms if t in hay)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("query", nargs="*", help="search terms")
+    ap.add_argument("--platform")
+    ap.add_argument("--method")
+    ap.add_argument("--limit", type=int, default=20)
+    args = ap.parse_args()
+
+    if not os.path.exists(INDEX):
+        print("Index missing. Run: python3 scripts/build-openapi-index.py", file=sys.stderr)
+        return 2
+    with open(INDEX) as f:
+        data = json.load(f)
+
+    terms = [t.lower() for t in " ".join(args.query).split() if t]
+    if args.platform:
+        seg = "/" + args.platform.lower() + "/"
+        data = [r for r in data if seg in r["path"].lower()]
+    if args.method:
+        data = [r for r in data if r["method"] == args.method.upper()]
+
+    if terms:
+        ranked = [(score(r, terms), r) for r in data]
+        ranked = [(s, r) for s, r in ranked if s > 0]
+        ranked.sort(key=lambda sr: (-sr[0], len(sr[1]["path"])))
+        rows = [r for _, r in ranked]
+    else:
+        rows = sorted(data, key=lambda r: r["path"])
+
+    rows = rows[: args.limit]
+    if not rows:
+        print("No matching endpoints.")
+        return 1
+    for r in rows:
+        params = ",".join(r["params"][:5])
+        print(f'{r["method"]:4} {r["path"]}  [{r["tag"]}]  params: {params}')
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
