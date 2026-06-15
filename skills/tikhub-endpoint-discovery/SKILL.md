@@ -7,6 +7,14 @@ description: Find the right TikHub endpoint among 1,100+ across 16+ platforms. U
 
 TikHub has 1,100+ endpoints. This skill finds the one you need, then hands off to a calling path.
 
+## Setup gate
+
+```bash
+# The bundled index is searchable offline — no key needed to FIND an endpoint.
+# But CALLING any endpoint you find requires a key:
+[ -z "${TIKHUB_API_KEY:-}" ] && echo "Index search works without a key; to actually call an endpoint, set TIKHUB_API_KEY (see tikhub-onboarding)."
+```
+
 ## Use the bundled search CLI
 
 `bin/tikhub-find-endpoint` (on PATH when the plugin is enabled) searches a trimmed index of

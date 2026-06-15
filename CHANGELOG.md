@@ -14,5 +14,5 @@ Initial release.
 - **Task skills:** `social-media-downloader`, `creator-analytics`, `trend-research`,
   `social-listening`, `competitor-analysis`, `hashtag-research`, `comments-analysis`,
   `bulk-data-export`.
-- `.mcp.json` wires the Core-6 platforms to `mcp.tikhub.io` via `mcp-remote`.
+- `.mcp.json` wires seven platform servers (Core-6 + Threads) to `mcp.tikhub.io` via `mcp-remote`.
 - Bundled trimmed OpenAPI index and structural validation harness.
