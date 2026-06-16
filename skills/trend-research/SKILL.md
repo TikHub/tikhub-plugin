@@ -20,12 +20,10 @@ Surface trending content, hashtags, sounds, and rankings, optionally scoped to a
 | TikTok | Popular trends | `GET /api/v1/tiktok/ads/get_popular_trends` (`period`, `country_code`) |
 | TikTok | Trending hashtags | `GET /api/v1/tiktok/ads/get_trends_hashtag_list` |
 | TikTok | Hot sounds | `GET /api/v1/tiktok/ads/get_sound_rank_list` |
-| Douyin | Rising hot list | `GET /api/v1/douyin/billboard/fetch_hot_rise_list` |
-| Douyin | Hot categories | `GET /api/v1/douyin/billboard/fetch_hot_category_list` |
-| Douyin | Total hot search | `POST /api/v1/douyin/billboard/fetch_hot_total_search_list` |
 | Twitter/X | Trending topics | `GET /api/v1/twitter/web/fetch_trending` (`country`) |
 
-For niche trends, also run keyword/hashtag search on the relevant platform skill.
+For niche trends, also run keyword/hashtag search on the relevant platform skill. For other
+platforms' trend sources, use `tikhub-find-endpoint "<goal>" --platform <slug>`.
 
 ## Workflow
 

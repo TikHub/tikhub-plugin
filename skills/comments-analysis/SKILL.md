@@ -21,8 +21,8 @@ Mine a single post's comment section for sentiment and themes.
    - Instagram: `v2/fetch_post_comments` (+ `fetch_comment_replies`).
    - YouTube: `web_v2/get_video_comments` (+ `get_video_comment_replies`).
    - Twitter: `web/fetch_post_comments`. Xiaohongshu: `app_v2/get_note_comments`.
-3. **Optional fast keywords:** TikTok `analytics/fetch_comment_keywords` (`item_id`) and Douyin
-   `billboard/fetch_hot_comment_word_list` (`aweme_id`) give comment keyword summaries directly.
+3. **Optional fast keywords:** TikTok `analytics/fetch_comment_keywords` (`item_id`) gives a
+   comment keyword summary directly.
 4. **Analyze:** sentiment breakdown, top themes with example quotes, most-liked comments, and any
    recurring questions/complaints.
 5. **Deliver** a summary with cited example comments.

@@ -37,7 +37,7 @@ with TikHub(api_key=os.environ["TIKHUB_API_KEY"]) as client:
 The client exposes ~54 resources, named `{platform}_{api}`. Common ones:
 
 - TikTok: `tiktok_app_v3`, `tiktok_ads`, `tiktok_creator`, `tiktok_analytics`, `tiktok_shop_web`
-- Douyin: `douyin_app_v3`, `douyin_search`, `douyin_billboard`, `douyin_xingtu`
+- Douyin: `douyin_app_v3`, `douyin_search`
 - Instagram: `instagram_v1`, `instagram_v2`, `instagram_v3`
 - YouTube: `youtube_web`, `youtube_web_v2`
 - Twitter/Threads: `twitter_web`, `threads_web`

@@ -1,7 +1,7 @@
 {
   "name": "tikhub-plugin",
   "description": "TikHub social-media data for Claude. Download media and fetch posts, profiles, comments, search results, trends, and analytics across TikTok, Douyin, Instagram, YouTube, Twitter/X, Threads, Xiaohongshu, and 9+ more platforms — via TikHub's hosted MCP server, the REST API, or the Python SDK. Includes onboarding/auth routing, MCP wiring, REST and SDK best practices, an endpoint-discovery tool over 1,100+ API endpoints, deep platform skills, and task skills (downloader, creator analytics, trend research, social listening, competitor analysis, hashtag research, comment mining, bulk export).",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "TikHub",
     "email": "tikhub.io@proton.me",
